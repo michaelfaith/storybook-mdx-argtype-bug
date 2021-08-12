@@ -1,17 +1,15 @@
 import React from 'react';
 
-export type ThemeNameType = 'light' | 'dark' | 'system';
-
 type ThemeNameProps = {
-    themeName?: ThemeNameType;
+    name?: 'light' | 'dark' | 'system';
 };
 
 const ThemeName = (props: ThemeNameProps) => {
 
-    const themeName = props.themeName ?? 'light';
+    const name = props.name ?? 'light';
 
     return (
-        <div><strong>Theme Name:</strong> {themeName}</div>
+        <div><strong>Theme Name:</strong> {name}</div>
     );
 };
 
