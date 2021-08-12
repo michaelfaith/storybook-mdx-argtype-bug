@@ -1,0 +1,28 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks';
+import ThemeName, { ThemeNameType } from './ThemeName';
+
+<Meta
+  title="Theme/ThemeName"
+  component={ThemeName}
+  argTypes={{
+    themeName: {
+      description: 'Determines what theme should be applied to the application.',
+      options: [
+        'dark',
+        'light',
+        'system',
+      ],
+      table: {
+        defaultValue: { summary: 'light' }
+      },
+    }
+  }}
+/>
+
+# ThemeName
+
+<ArgsTable of={ThemeName} />
+
+<Canvas>
+    <ThemeName themeName={ 'dark' } />
+</Canvas>
